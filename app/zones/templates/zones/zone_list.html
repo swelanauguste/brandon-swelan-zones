@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+Zones
+{% endblock head_title %}
+
+
+{% block content %}
+
+<div class="container">
+
+    
+    <h1>Zones</h1>
+<hr>
+
+    {% for zone in object_list %}
+    <ul>
+        <li>
+            <a href="{{zone.get_absolute_url}}">
+                {{zone.name}} ({{zone.common_name}})
+            </a>
+        </li>
+    </ul>
+    {% endfor %}
+
+</div>
+{% endblock content %}
